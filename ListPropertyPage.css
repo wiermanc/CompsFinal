@@ -1,0 +1,214 @@
+.list-property-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #f7f7f7;
+    min-height: 100vh;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.list-property-form {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+.list-property-form-group {
+    margin-bottom: 25px;
+}
+
+.list-property-form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.list-property-form-group input,
+.list-property-form-group select,
+.list-property-form-group textarea {
+    padding: 15px;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    /* Ensure full width for larger input fields */
+    width: 100%;
+}
+.select-small {
+    width: 50%; /* or any other suitable width */
+    margin: 0 auto; /* This centers the select in the form */
+}
+
+.input-with-dollar-sign {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 30%; /* Adjust width as necessary */
+}
+
+.input-with-dollar-sign::before {
+    content: '$';
+    position: absolute;
+    left: 10px; /* Adjust position as necessary */
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 1; /* Make sure this matches the line-height of the input if set */
+    font-size: 16px;
+    color: #555;
+    pointer-events: none;
+}
+
+.room-image {
+    max-width: 200px; /* Maximum width */
+    max-height: 200px; /* Maximum height */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* If you want to center your image add this line */
+    margin: 0 auto; /* Center your image horizontally */
+  }
+
+.small-input {
+    padding-left: 25px; /* Adjust padding to make room for dollar sign */
+    width: 100%; /* This will take up 100% of the .input-with-dollar-sign width */
+    line-height: 1; /* Set line-height to ensure vertical alignment */
+    /* Additional styles to ensure the text is vertically centered */
+    display: flex;
+    align-items: center;
+    height: 40px; /* Set a fixed height to help with vertical alignment */
+}
+
+.list-property-form-group input[type="checkbox"],
+.list-property-form-group input[type="radio"] {
+    transform: scale(1.2);
+    margin-right: 5px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.add-room-button,
+.submit-btn {
+    padding: 15px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    /* Ensure buttons take full width */
+    width: 100%;
+}
+
+.add-room-button {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.add-room-button:hover,
+.submit-btn:hover {
+    background-color: #dcdcdc;
+}
+
+.submit-btn {
+    background-color: #0056b3;
+    color: white;
+    margin-top: 20px;
+}
+
+.utilities-included-container {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.list-property-form-group label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.input-with-dollar-sign {
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* Set a specific width for the input with the dollar sign */
+    width: 30%;
+}
+
+.input-with-dollar-sign .rent-input {
+    padding-left: 25px;
+    width: 100%;
+}
+
+.input-with-dollar-sign::before {
+    content: '$';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #555;
+    pointer-events: none;
+    .list-property-form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .list-property-page {
+        padding: 20px;
+    }
+
+    .add-room-button,
+    .submit-btn {
+        padding: 15px;
+    }
+
+}
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Adds some space between each checkbox line */
+  }
+  
+  .checkbox-container label {
+    margin-right: 10px; /* Space between the checkbox and the label text */
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* Prevent the label from wrapping */
+  }
+
+  .checkbox-inline {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    margin-right: 8px; /* Adjusts spacing to the right of the label */
+  }
+  
+  /* Styles for the checkbox */
+  .checkbox-container input[type='checkbox'] {
+    margin-right: 5px;
+    /* Remove any top or bottom margins that may be affecting alignment */
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+@media (max-width: 768px) {
+    
+    /* Make inputs full width on smaller screens */
+    .list-property-form-group input,
+    .list-property-form-group select,
+    .list-property-form-group textarea {
+        width: 100%;
+    }
+    
+}
