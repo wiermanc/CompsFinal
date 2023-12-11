@@ -1,0 +1,245 @@
+.listings-page {
+  background-color: #f7f7f7;
+  font-family: 'Arial', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  position: relative; /* Ensures that absolute positioning is relative to this container */
+}
+
+.listings-page-header {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  text-align: center;
+  position: relative; /* Context for positioning the List Your Property button */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: auto; /* Pushes the logo to the left and other elements to the right */
+}
+
+.filter-button-container {
+  display: flex;
+  justify-content: space-between; /* This will space out your buttons */
+  padding: 10px 0; /* Add padding at the top and bottom if needed */
+}
+
+.filter-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.filter-dropdown-content {
+  display: none; /* Keep it as none to start with */
+  position: absolute; /* Position absolutely within .filters */
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: 0; /* Align to the right edge of .filters */
+  top: 100%; /* Position just below the filter bar */
+}
+
+
+.filter-dropdown-content.show {
+  display: block;
+}
+
+.filter-dropdown-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.filter-dropdown-btn:hover, .apply-btn:hover {
+  background-color: #0056b3;
+}
+
+.filter-dropdown-content label {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.apply-btn,
+.reset-btn {
+  background-color: #4CAF50;
+  padding: 10px 20px; /* Adjust padding to your preference */
+  margin: 0 5px; /* Adjust margin for spacing between buttons */
+  cursor: pointer; /* Changes cursor to pointer when hovering over the buttons */
+}
+
+.reset-btn {
+  background-color: #ff6347; /* Tomato color, you can choose whatever color you prefer */
+  border: none; /* No border for the button */
+  color: white; /* Text color */
+}
+
+.apply-btn:hover,
+.reset-btn:hover {
+  opacity: 0.9; /* Slightly see-through on hover */
+}
+
+.more-filters-container .additional-filters-dropdown {
+  display: none; /* Hide dropdown by default */
+  position: absolute; /* Position it relative to the more-filters-container */
+  background-color: #ffffff; /* Background color for the dropdown */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add some shadow for depth */
+  padding: 10px; /* Add some padding inside the dropdown */
+  z-index: 10; /* Make sure it's on top of other elements */
+  right: 0; /* Align to the right edge of the more-filters-container */
+}
+
+/* Show the dropdown when isAdditionalFiltersOpen is true */
+.more-filters-container .additional-filters-dropdown.show {
+  display: block;
+}
+
+
+.list-property-link {
+  color: #007bff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid #007bff;
+  border-radius: 0.25rem;
+  position: absolute; /* Absolute positioning */
+  top: 1rem; /* Aligns with the top of the header */
+  right: 1rem; /* Aligns with the right of the header */
+  display: inline-block;
+}
+
+.list-property-link:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+.search-and-filter-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.search-input,
+.price-range-input,
+.bedrooms-range-input,
+.bathrooms-range-input,
+.filter-type-select,
+.university-filter-select {
+  font-weight: bold;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  flex: 1;
+  min-width: 120px;
+}
+
+.filters {
+  position: relative; 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.filter-type-select {
+  flex-grow: 2;
+}
+
+.listings-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.listing-card {
+  background-color: #fff;
+  color: #333;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.2s; /* Added for subtle hover effect */
+}
+
+.listing-card:hover {
+  transform: translateY(-5px); /* Lift card on hover */
+}
+
+
+.property-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 3 / 2; /* Maintain a consistent aspect ratio for all images */
+}
+
+.listing-details {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.listing-price {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.listing-title {
+  font-size: 1.25rem; /* Increased size */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.listing-address {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.listing-description {
+  flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+  .search-and-filter-section,
+  .filters {
+      flex-direction: column;
+  }
+
+  .search-input,
+  .price-range-input,
+  .bedrooms-range-input,
+  .bathrooms-range-input,
+  .filter-type-select,
+  .university-filter-select {
+      width: 100%;
+  }
+
+  .list-property-link {
+    padding: 10px 20px; /* Larger padding */
+    background-color: #ff4500; /* Bright, eye-catching color */
+    color: white; /* Contrast text color */
+    font-size: 1.2em; /* Larger font size */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  }
+
+  .listings-container {
+      grid-template-columns: 1fr; /* Stack cards on smaller screens */
+  }
+}
+
+  
